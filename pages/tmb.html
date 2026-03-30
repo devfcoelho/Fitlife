@@ -26,21 +26,46 @@
     <nav>
         <main>
             <section>
-                <header>
-                    <h1>TMB</h1>
-                    <p>Em breve você poderá calcular seu TMB aqui.</p>
+                <h1>Taxa Metabólica Basal</h1>
 
-                </header>
+                <form>
+                    <label for="gender">Gênero</label>
+                    <select id="gender">
+
+                        <option value="male">Masculino</option>
+                        <option value="female">Feminino</option>
+
+
+
+
+                    </select>
+
+            
+
+                    <label for="weight">Peso</label>
+                    <input type="Number" id="weight" placeholder="Ex: 70">
+
+                    <label for="height">Altura (cm)</label>
+                    <input type="Number" id="height" placeholder="Ex: 175">
+
+                    <label for="weight">Idade (anos)</label>
+                    <input type="Number" id="age" placeholder="Ex: 25">
+
+                    <button type="submit">Calcular Calorias</button>
+
+                    </form>
+
+                    <div>
+                        <p>Gasto calórico basal</p>
+                        <h2>0000</h2>
+                        <p>Kcal/dia</p>
+                    </div>
+               
                 <a href="../index.html">Voltar</a>
 
 
             </section>
-
-
-
-
-
-        </main>
+            </main>
     
 </body>
 </html>
