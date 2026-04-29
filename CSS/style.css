@@ -15,9 +15,20 @@ nav{
     display: flex;
     justify-content: space-between;
     aling-items: center;
+
+    height: 80px;
     background-color: #fff;
     padding: 0 80px;
-    box-shadow: 0 2px 8px rgba(0,0);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  color: #00b894;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .nav-links {
