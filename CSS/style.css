@@ -100,17 +100,20 @@ nav {
   color: var(--muted-color);
   margin-top: 0.5rem;
 }
-
-main{
-  width: 80vw;
+main {
+  width: var(--container-width);
+  max-width: 75rem;
   margin: 0 auto;
   padding: 2rem 0;
-
 }
 .cards-section {
-    display: flex;
-    gap: 1.5rem;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  text-align: center;
 }
 .feature-card {
   background-color: var(--card-color);
@@ -164,12 +167,18 @@ main{
   font-weight: 600;
   color: var(--secondary-color);
 }
-.form-group input{
+.form-group input,
+.form-group select{
   padding: 0.8rem;
   border: 2px solid var(--border-color);
   border-radius: 10px;
   font-size: 1rem;
   font-family: inherit;
+}
+.form-group input:focus,
+.form-group select:focus{
+  outline: none;
+  border-color: var(--primary-color);
 }
 .action-btn{
   padding: 0.8rem 1rem;
@@ -182,5 +191,21 @@ main{
   font-family: inherit;
   cursor: pointer;
   text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+}
+.action-btn:hover{
+  background-color: var(--primary-dark)
+}
+.btn-back{
+  background-color: var(--muted-color);
+}
+.btn-back:hover{
+  background-color: var(--secondary-color);
+}
+.result-box{
+  padding: 1.25rem;
+  background-color: #e8f8f5;
+  border-radius: 10px;
   text-align: center;
 }
