@@ -6,45 +6,55 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../CSS/style.css">
+    <link  rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      >
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap%22" rel="stylesheet">
     <title>Fitlife | IMC</title>
 </head>
-<body>
+<body style="font-family: Poppins">
     
-    <nav>
-    
+   <nav>
+      <a href="index.html" class="logo">
+        <i class="fas fa-heartbeat"></i>
+        FitLife
+      </a>
 
-    <a href="../index.html">Fitlife</a>
-    <ul class="nav-links">
-        <li><a class="nav-link" id="nav-active" href="../index.html">home</a></li>
-        <li><a href="imc.html"></a></li>
-        <li><a href="tmb.html"></a></li>
-        <li><a href="water.html"></a></li>
-
-
-
-
-    </ul>
-</nav>
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="imc.html" id="nav-active" class="nav-link">IMC</a></li>
+        <li><a href="tmb.html" class="nav-link">TMB</a></li>
+        <li><a href="water.html" class="nav-link">Água</a></li>
+      </ul>
+    </nav>
         <main>
-            <section>
-                <h1>Cálculo de IMC</h1>
+            <section class="tool-container">
+               <div class="tool-container-title">
+                <h2><i class="fas fa-weight"></i>Taxa metabólica Basal<h2>
+               </div>
 
                 <form>
+                    <div class="form-group">
                     <label for = "weight"> Peso (kg)</label>
                     <input type="number" id="weight" placeholder="Ex: 70" required>
+                    </div>
 
+                    <div class="form-group">
                     <label for="height" >Altura (m)</label>
                     <input type="number" id="height" placeholder="Ex: 1.7" required step ="any"
                     >
-                    
-
-                    <button type="submit">Calcular</button>
-
+                    </div>
+                    <button type="submit" class="action-btn">Calcular</button>
+                    <a class="action-btn btn-back" href="../index.html">Voltar</a>
                 </form>
+                <div class="result-box">
+                  <p>Seu imc é:</p>
+                  <h2>00.0</h2>
+                  <p>Classificação</p>
 
-
-                <a href="../index.html">Voltar</a>
+                </div> 
+              
+              
 
                 <section>
 
