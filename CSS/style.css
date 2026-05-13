@@ -9,8 +9,8 @@
   --danger-color: #d63031;
   --water-color: #0984e3;
   --border-color: #dfe6e9;
-  --shadow-md: 0 10px 10px rgba(0, 0, 0, 0.05);
- 
+  --shadow-md: 0 0.625rem 1rem rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 
@@ -208,10 +208,4 @@ main {
   background-color: #e8f8f5;
   border-radius: 10px;
   text-align: center;
-}
-@media (max-width: 480px){
-  nav{
-    flex-direction: column;
-    justify-content:center
-  }
 }
