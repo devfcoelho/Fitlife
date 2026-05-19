@@ -41,14 +41,14 @@
             <p class="tool-container-title">Meta diária: 2500 ml</p>
 
             <div class="water-controls">
-                <button class="action-btn btn-water-add" type="button">250 ml</button>
-                <button class="action-btn btn-water-reset" type="button">Zerar</button>
+                <button class="action-btn btn-water-add" type="button" onclick="addWater(250)">250 ml</button>
+                <button class="action-btn btn-water-reset" type="button" onclick="resetWater(0)">Zerar</button>
             </div>
             <div class="progress-container">
-                <div class="progress-bar">0%</div>
+                <div class="progress-bar" id="water-bar">0%</div>
 
             </div>
-            <p>Total: <span>0</span>ml</p>
+            <p>Total: <span id="water-total" >0</span>ml</p>
             
 
             
@@ -60,6 +60,7 @@
 
 
     </main>
+    <script src="/js/water.js"></script>
     
 </body>
 </html>
