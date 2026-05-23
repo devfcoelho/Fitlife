@@ -1,29 +1,27 @@
-let currentWater = 0
-const waterGoal = 2500
+document.addEventListener('DOMContentLoaded', () => {
+    const btnAdd = document.querySelector('.btn-water-add');
+    const btnReset = document.querySelector('.btn-water-reset');
+    const progressBar = document.querySelector('.progress-bar');
+    const totalSpan = document.querySelector('span');
 
-function addWater(amount){
-    currentWater = currentWater + amount
-    uptadeInterface()
-}
-function resetWater(){
-    currentWater = 0
-    uptadeInterface()
-}
+    const meta = 2500;
+    let total = 0;
 
-function uptadeInterface(){
-    const bar = document.getElementById("water-bar")
-    const totalText = document.getElementById("water-total")
+    btnAdd.addEventListener('click', () => {
+        total += 250;
+        if (total > meta) total = meta;
 
-    const percentage = (currentWater / waterGoal) * 100
-    totalText.innerText = currentWater
-    bar.style.width = `${Math.min(percentage,100)}%`
-    bar.innerText = `${Math.round(percentage)}%`
+        const porcentagem = (total / meta) * 100;
 
+        progressBar.style.width = porcentagem + '%';
+        progressBar.textContent = porcentagem.toFixed(0) + '%';
+        totalSpan.textContent = total;
+    });
 
-    if (currentWater >= waterGoal){
-        bar.style.backgroundColor = '#00b894'
-        bar.innerText = 'Meta atingida!'
-    } else {
-        bar.style.backgroundColor = '#0984e3'
-    }
-}
+    btnReset.addEventListener('click', () => {
+        total = 0;
+        progressBar.style.width = '0%';
+        progressBar.textContent = '0%';
+        totalSpan.textContent = 0;
+    });
+});
